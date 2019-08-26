@@ -1,0 +1,6 @@
+<% @recipes.map do |r| %>
+    <a href="/recipes/<%= r.id %>"> <%= r.name %> </a><br>
+    <%= r.ingredients %>
+    <%= r.cook_time %>
+    <br>
+<% end %>

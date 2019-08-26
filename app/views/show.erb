@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Ingredients </th>
+        <th> Cook Time </th>
+        <th> Edit </th>
+    </tr>
+    <tr>
+        <td> <%= @recipe.id %> </td>
+        <td> <%= @recipe.name %> </td>
+        <td> <%= @recipe.ingredients %> </td>
+        <td> <%= @recipe.cook_time %> </td>
+        <td> <a href="/recipes/<%= @recipe.id %>/edit"> edit </td>
+    </tr>
+<table>
+
+<form action="/recipes/<%= @recipe.id %>" method='post'>
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type='submit' value='delete me'>
+</form>
